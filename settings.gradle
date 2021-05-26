@@ -1,0 +1,8 @@
+include ':app'
+rootProject.name = "HarajTask"
+include ':base'
+include ':core'
+include ':db'
+include ':gui'
+include ':network'
+include ':testutils'

@@ -1,15 +1,20 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    id 'kotlin-parcelize'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.3"
+    def ext = rootProject.extensions.getByName('ext')
+
+    compileSdkVersion ext.compile_sdk_version
+    buildToolsVersion ext.build_tools_version
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 30
+        minSdkVersion ext.min_sdk_version
+        targetSdkVersion ext.target_sdk_version
         versionCode 1
         versionName "1.0"
 
@@ -33,12 +38,19 @@ android {
 }
 
 dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.5.0'
-    implementation 'androidx.appcompat:appcompat:1.3.0'
-    implementation 'com.google.android.material:material:1.3.0'
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    // development
+    def appDependencies = rootProject.ext.appDependencies
+    api project(':base')
+    api appDependencies.kotlinStdlib
+    api appDependencies.kotlinStdlibJdk7
+    api appDependencies.hiltAndroid
+
+    kapt appDependencies.hiltCompiler
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }

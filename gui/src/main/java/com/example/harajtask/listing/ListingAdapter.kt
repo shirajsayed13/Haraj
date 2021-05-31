@@ -5,11 +5,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.harajtask.FeedItem
 import com.example.harajtask.gui.databinding.ItemListingBinding
 import com.example.harajtask.layoutInflater
-import dagger.hilt.android.scopes.FragmentScoped
 import javax.inject.Inject
 import kotlin.properties.Delegates
 
-@FragmentScoped
 internal class ListingAdapter @Inject constructor() :
     RecyclerView.Adapter<ListingAdapter.ListingViewHolder>() {
 

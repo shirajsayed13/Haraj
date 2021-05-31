@@ -1,5 +1,6 @@
-package com.example.harajtask
+package com.example.harajtask.network.service
 
+import com.example.harajtask.FeedItem
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 

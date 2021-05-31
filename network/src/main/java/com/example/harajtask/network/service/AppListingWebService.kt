@@ -1,5 +1,7 @@
-package com.example.harajtask
+package com.example.harajtask.network.service
 
+import com.example.harajtask.*
+import com.example.harajtask.networkCall
 import javax.inject.Inject
 
 internal class AppListingWebService @Inject constructor(

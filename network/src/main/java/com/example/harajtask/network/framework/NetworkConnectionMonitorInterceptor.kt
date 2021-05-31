@@ -1,6 +1,7 @@
-package com.example.harajtask
+package com.example.harajtask.network
 
 import android.net.ConnectivityManager
+import com.example.harajtask.WebServiceFailure
 import okhttp3.Interceptor
 import okhttp3.Response
 import javax.inject.Inject

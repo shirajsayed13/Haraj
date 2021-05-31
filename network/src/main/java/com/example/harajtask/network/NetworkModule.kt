@@ -1,8 +1,11 @@
-package com.example.harajtask
+package com.example.harajtask.network
 
 import android.content.Context
 import android.net.ConnectivityManager
-import com.example.harajtask.network.BuildConfig
+import com.example.harajtask.ListingWebService
+import com.example.harajtask.network.service.AppListingWebService
+import com.example.harajtask.network.service.RetrofitListingWebService
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -72,5 +75,14 @@ internal object NetworkModule {
     @Singleton
     internal fun provideRetrofitListingWebService(retrofit: Retrofit): RetrofitListingWebService =
         retrofit.create(RetrofitListingWebService::class.java)
+
+
+    @Module
+    @InstallIn(SingletonComponent::class)
+    internal interface AppWebService {
+        @Binds
+        @Singleton
+        abstract fun bindListingWebService(service: AppListingWebService): ListingWebService
+    }
 
 }

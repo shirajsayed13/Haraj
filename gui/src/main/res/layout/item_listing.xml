@@ -14,7 +14,8 @@
         android:src="@drawable/mercedes_benz"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/RoundedImageViewShape" />
 
     <TextView
         android:id="@+id/tv_title"
@@ -40,10 +41,10 @@
         android:gravity="center|start"
         android:paddingHorizontal="4dp"
         android:paddingVertical="2dp"
+        android:text="@string/since_3_hours"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_title"
-        tools:text="Since 3 hours" />
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
 
     <TextView
         android:id="@+id/tv_chat"

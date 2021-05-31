@@ -15,7 +15,7 @@ import kotlin.properties.Delegates
 internal class ListingAdapter @Inject constructor() :
     RecyclerView.Adapter<ListingAdapter.ListingViewHolder>() {
 
-    internal var onFeedItemClickListener: (FeedItem, position: Int) -> Unit = { _, _ -> }
+    internal var onFeedItemClickListener: (FeedItem) -> Unit = { }
 
     internal var feedItems: List<FeedItem> by Delegates.observable(emptyList()) { _, _, _ -> notifyDataSetChanged() }
 
@@ -39,8 +39,7 @@ internal class ListingAdapter @Inject constructor() :
         init {
             binding.root.setOnClickListener {
                 onFeedItemClickListener(
-                    feedItems[adapterPosition],
-                    adapterPosition
+                    feedItems[adapterPosition]
                 )
             }
         }

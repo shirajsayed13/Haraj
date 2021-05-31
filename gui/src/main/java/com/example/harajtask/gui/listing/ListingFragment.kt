@@ -3,6 +3,7 @@ package com.example.harajtask.gui.listing
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewbinding.ViewBinding
 import com.example.harajtask.failure
@@ -42,6 +43,14 @@ class ListingFragment : BaseFragment() {
                 layoutManager = LinearLayoutManager(context)
                 adapter = listingAdapter
             }
+        }
+
+        listingAdapter.onFeedItemClickListener = {
+            findNavController().navigate(
+                ListingFragmentDirections.actionListingFragmentToDetailFragment(
+                    it
+                )
+            )
         }
     }
 

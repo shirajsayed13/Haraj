@@ -13,6 +13,8 @@ import com.bumptech.glide.request.target.Target
 import com.example.harajtask.WebServiceFailure
 import com.google.android.material.imageview.ShapeableImageView
 import timber.log.Timber
+import java.text.SimpleDateFormat
+import java.util.*
 
 internal fun Fragment.handleFailure(e: Exception?) {
     Timber.v("handleFailure: IN")
@@ -61,4 +63,11 @@ fun ShapeableImageView.loadImageFromUrl(
 
     })
         .into(this)
+}
+
+
+fun convertLongToTime(time: Long): String {
+    val date = Date(time)
+    val format = SimpleDateFormat("yyyy/MM/dd HH:mm a")
+    return format.format(date)
 }

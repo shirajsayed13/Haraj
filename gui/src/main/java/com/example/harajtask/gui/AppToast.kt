@@ -1,4 +1,4 @@
-package com.example.harajtask
+package com.example.harajtask.gui
 
 import android.annotation.SuppressLint
 import android.content.Context

@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/listingFragment"
-        android:name="com.example.harajtask.listing.ListingFragment"
+        android:name="com.example.harajtask.gui.listing.ListingFragment"
         android:label="ListingFragment"
         tools:layout="@layout/fragment_listing"/>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.example.harajtask.detail.DetailFragment"
+        android:name="com.example.harajtask.gui.detail.DetailFragment"
         android:label="DetailFragment"
         tools:layout="@layout/fragment_detail"/>
 </navigation>

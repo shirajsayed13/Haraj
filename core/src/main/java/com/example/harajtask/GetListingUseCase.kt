@@ -2,7 +2,7 @@ package com.example.harajtask
 
 import javax.inject.Inject
 
-class GetListUseCase @Inject constructor(
+class GetListingUseCase @Inject constructor(
     private val listingWebService: ListingWebService
 ) {
 

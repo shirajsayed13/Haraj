@@ -1,5 +1,6 @@
-package com.example.harajtask
+package com.example.harajtask.gui
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.viewbinding.ViewBinding
 import com.example.harajtask.gui.R
@@ -16,4 +17,10 @@ internal class HarajActivity : BaseActivity() {
     override val bindingInflater: (LayoutInflater) -> ViewBinding
         get() = ActivityHarajBinding::inflate
 
+    override val binding: ActivityHarajBinding
+        get() = super.binding as ActivityHarajBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
 }

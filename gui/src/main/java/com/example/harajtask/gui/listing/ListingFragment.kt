@@ -1,19 +1,16 @@
-package com.example.harajtask.listing
+package com.example.harajtask.gui.listing
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewbinding.ViewBinding
-import com.example.harajtask.WebServiceFailure
 import com.example.harajtask.failure
 import com.example.harajtask.fragment.BaseFragment
 import com.example.harajtask.gui.R
 import com.example.harajtask.gui.databinding.FragmentListingBinding
 import com.example.harajtask.observe
-import com.example.harajtask.showErrorToast
 import dagger.hilt.android.AndroidEntryPoint
-import timber.log.Timber
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -35,7 +32,7 @@ class ListingFragment : BaseFragment() {
 
     override fun onInitView() {
         viewModel.apply {
-            failure(failure, ::handleFailure)
+            //failure(failure, ::handleFailure)
             observe(feedItems, { listingAdapter.feedItems = it })
             loadListing()
         }
@@ -48,16 +45,5 @@ class ListingFragment : BaseFragment() {
         }
     }
 
-    private fun handleFailure(e: Exception) {
-        Timber.v("handleFailure: IN")
-        Timber.e(e)
-        when (e) {
-            is WebServiceFailure.NoNetworkFailure -> showErrorToast("No internet connection!")
-            is WebServiceFailure.NetworkTimeOutFailure, is WebServiceFailure.NetworkDataFailure -> showErrorToast(
-                "Internal server error!"
-            )
-            else -> showErrorToast("Unknown error occurred!")
-        }
-        Timber.v("handleFailure: OUT")
-    }
+
 }

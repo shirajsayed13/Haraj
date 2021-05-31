@@ -1,7 +1,8 @@
-package com.example.harajtask
+package com.example.harajtask.gui
 
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.harajtask.WebServiceFailure
 import timber.log.Timber
 
 internal fun Fragment.handleFailure(e: Exception?) {

@@ -1,4 +1,4 @@
-package com.example.harajtask.detail
+package com.example.harajtask.gui.detail
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

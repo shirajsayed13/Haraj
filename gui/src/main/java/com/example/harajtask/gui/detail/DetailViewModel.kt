@@ -1,4 +1,4 @@
-package com.example.harajtask.detail
+package com.example.harajtask.gui.detail
 
 import com.example.harajtask.viewmodel.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel

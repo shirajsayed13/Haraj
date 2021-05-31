@@ -1,17 +1,19 @@
-package com.example.harajtask.listing
+package com.example.harajtask.gui.listing
 
+import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.harajtask.FeedItem
 import com.example.harajtask.gui.databinding.ItemListingBinding
-import com.example.harajtask.layoutInflater
+import dagger.hilt.android.scopes.FragmentScoped
 import javax.inject.Inject
 import kotlin.properties.Delegates
 
+@FragmentScoped
 internal class ListingAdapter @Inject constructor() :
     RecyclerView.Adapter<ListingAdapter.ListingViewHolder>() {
 
-    internal var onUsedItemClickListener: (FeedItem, position: Int) -> Unit = { _, _ -> }
+    internal var onFeedItemClickListener: (FeedItem, position: Int) -> Unit = { _, _ -> }
 
     internal var feedItems: List<FeedItem> by Delegates.observable(emptyList()) { _, _, _ -> notifyDataSetChanged() }
 
@@ -21,14 +23,14 @@ internal class ListingAdapter @Inject constructor() :
         holder.bind(feedItems[position])
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListingViewHolder =
-        ListingViewHolder(ItemListingBinding.inflate(parent.layoutInflater, parent, false))
+        ListingViewHolder(ItemListingBinding.inflate(LayoutInflater.from(parent.context), parent, false))
 
     inner class ListingViewHolder(private val binding: ItemListingBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         init {
             binding.root.setOnClickListener {
-                onUsedItemClickListener(
+                onFeedItemClickListener(
                     feedItems[adapterPosition],
                     adapterPosition
                 )

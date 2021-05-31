@@ -1,5 +1,9 @@
 package com.example.harajtask.gui.detail
 
+import android.graphics.Color
+import android.text.Spannable
+import android.text.SpannableStringBuilder
+import android.text.style.ForegroundColorSpan
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
@@ -36,6 +40,19 @@ class DetailFragment : BaseFragment() {
                 tvSellerName.text = feedItem.username
                 tvDescription.text = feedItem.body
             }
+
+            val contact =
+                SpannableStringBuilder(
+                    "Please contact me: \n +966500100100"
+                )
+
+            contact.setSpan(
+                ForegroundColorSpan(Color.parseColor("#4169E1")),
+                21,
+                34,
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+            )
+            tvContact.text = contact
         }
     }
 

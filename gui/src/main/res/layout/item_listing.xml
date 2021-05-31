@@ -61,11 +61,13 @@
         app:layout_constraintTop_toBottomOf="@id/tv_time"
         tools:text="(45)" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_seller_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
+        android:drawableEnd="@drawable/ic_user"
+        android:drawablePadding="12dp"
         android:gravity="center|start"
         android:paddingHorizontal="8dp"
         android:paddingVertical="2dp"

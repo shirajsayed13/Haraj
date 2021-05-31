@@ -2,8 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.harajtask.gui">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application>
-        <activity android:name="com.example.harajtask.HarajActivity"></activity>
+        <activity android:name="com.example.harajtask.HarajActivity"/>
     </application>
 
 </manifest>

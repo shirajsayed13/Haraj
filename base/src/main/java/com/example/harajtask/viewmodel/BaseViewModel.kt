@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 
 abstract class BaseViewModel : ViewModel() {
 
-    private val _failure: MutableLiveData<Exception> by lazy { MutableLiveData() }
+    val _failure: MutableLiveData<Exception> by lazy { MutableLiveData() }
 
     val failure: LiveData<Exception> get() = _failure
 

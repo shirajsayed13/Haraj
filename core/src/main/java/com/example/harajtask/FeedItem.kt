@@ -7,4 +7,5 @@ data class FeedItem(
     val city: String,
     val date: Long,
     val body: String,
+    val commentCount: Int
 )

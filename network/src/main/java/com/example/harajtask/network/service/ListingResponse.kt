@@ -11,7 +11,8 @@ internal fun ListingResponse.Data.Feed.toFeed() = FeedItem(
     thumbnailURL = thumbnailURL,
     city = city,
     date = date,
-    body = body
+    body = body,
+    commentCount = commentCount
 )
 
 @JsonClass(generateAdapter = true)
@@ -38,6 +39,8 @@ internal data class ListingResponse(
             val city: String,
             @Json(name = "date")
             val date: Long,
+            @Json(name = "commentCount")
+            val commentCount: Int,
             @Json(name = "body")
             val body: String
         )

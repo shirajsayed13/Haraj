@@ -1,5 +1,6 @@
-package com.example.harajtask
+package com.example.harajtask.webservice
 
+import com.example.harajtask.base.Failure
 
 class WebServiceFailure {
     class NoNetworkFailure(

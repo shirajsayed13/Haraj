@@ -1,6 +1,7 @@
-package com.example.harajtask
+package com.example.harajtask.app
 
 import android.app.Application
+import com.example.harajtask.BuildConfig
 import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
 

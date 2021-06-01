@@ -3,8 +3,7 @@ package com.example.harajtask.gui
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.viewbinding.ViewBinding
-import com.example.harajtask.gui.R
-import com.example.harajtask.gui.activity.BaseActivity
+import com.example.harajtask.base.activity.BaseActivity
 import com.example.harajtask.gui.databinding.ActivityHarajBinding
 import dagger.hilt.android.AndroidEntryPoint
 

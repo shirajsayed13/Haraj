@@ -8,7 +8,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
 import androidx.viewbinding.ViewBinding
-import com.example.harajtask.fragment.BaseFragment
+import com.example.harajtask.base.fragment.BaseFragment
 import com.example.harajtask.gui.R
 import com.example.harajtask.gui.convertLongToTime
 import com.example.harajtask.gui.databinding.FragmentDetailBinding

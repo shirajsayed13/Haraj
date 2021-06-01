@@ -2,37 +2,15 @@ package com.example.harajtask.gui
 
 import android.graphics.drawable.Drawable
 import android.widget.ImageView
-import android.widget.Toast
 import androidx.annotation.DrawableRes
-import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
-import com.example.harajtask.WebServiceFailure
 import com.google.android.material.imageview.ShapeableImageView
-import timber.log.Timber
 import java.text.SimpleDateFormat
 import java.util.*
-
-internal fun Fragment.handleFailure(e: Exception?) {
-    Timber.v("handleFailure: IN")
-    Timber.e(e)
-    when (e) {
-        is WebServiceFailure.NoNetworkFailure -> showErrorToast("No internet connection!")
-        is WebServiceFailure.NetworkTimeOutFailure, is WebServiceFailure.NetworkDataFailure -> showErrorToast(
-            "Internal server error!"
-        )
-        else -> showErrorToast("Unknown error occurred!")
-    }
-    Timber.v("handleFailure: OUT")
-}
-
-internal fun Fragment.showErrorToast(msg: String) {
-    AppToast.show(requireContext(), msg, Toast.LENGTH_SHORT)
-}
-
 
 fun ShapeableImageView.loadImageFromUrl(
     imageUrl: String?,

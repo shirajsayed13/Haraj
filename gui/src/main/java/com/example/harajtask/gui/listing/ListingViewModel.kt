@@ -2,13 +2,10 @@ package com.example.harajtask.gui.listing
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.viewModelScope
-import com.example.harajtask.GetListingUseCase
-import com.example.harajtask.FeedItem
-import com.example.harajtask.viewmodel.BaseViewModel
+import com.example.harajtask.model.FeedItem
+import com.example.harajtask.usecase.GetListingUseCase
+import com.example.harajtask.base.viewmodel.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import timber.log.Timber
 import javax.inject.Inject
 
@@ -22,12 +19,8 @@ internal class ListingViewModel @Inject constructor(
 
     internal fun loadListing() {
         Timber.d("loadListing: ")
-        viewModelScope.launch(Dispatchers.Default) {
-            try {
-                _feedItems.postValue(getListingUseCase())
-            } catch (e: Exception) {
-                _failure.postValue(e)
-            }
+        launchUseCase {
+            _feedItems.postValue(getListingUseCase())
         }
     }
 }

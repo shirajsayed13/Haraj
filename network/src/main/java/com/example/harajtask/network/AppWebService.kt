@@ -1,5 +1,7 @@
 package com.example.harajtask
 
+import com.example.harajtask.model.AuthToken
+import com.example.harajtask.webservice.WebServiceFailure
 import com.squareup.moshi.JsonDataException
 import com.squareup.moshi.JsonEncodingException
 import kotlinx.coroutines.Dispatchers

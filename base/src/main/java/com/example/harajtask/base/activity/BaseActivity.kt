@@ -1,4 +1,4 @@
-package com.example.harajtask.gui.activity
+package com.example.harajtask.base.activity
 
 import android.os.Bundle
 import android.view.LayoutInflater

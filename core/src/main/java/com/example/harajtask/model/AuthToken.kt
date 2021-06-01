@@ -1,4 +1,4 @@
-package com.example.harajtask
+package com.example.harajtask.model
 
 data class AuthToken(
     val accessToken: String,

@@ -22,7 +22,7 @@
         <argument
             android:name="feed"
             android:defaultValue="@null"
-            app:argType="com.example.harajtask.FeedItem"
+            app:argType="com.example.harajtask.model.FeedItem"
             app:nullable="true" />
     </fragment>
 </navigation>

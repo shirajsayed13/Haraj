@@ -1,4 +1,4 @@
-package com.example.harajtask.viewmodel
+package com.example.harajtask.base.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import timber.log.Timber
 
 abstract class BaseViewModel : ViewModel() {
 
@@ -16,6 +17,7 @@ abstract class BaseViewModel : ViewModel() {
 
     override fun onCleared() {
         super.onCleared()
+        Timber.d("onCleared: ")
     }
 
     protected fun launchUseCase(block: suspend CoroutineScope.() -> Unit) {

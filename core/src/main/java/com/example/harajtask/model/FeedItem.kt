@@ -1,4 +1,4 @@
-package com.example.harajtask
+package com.example.harajtask.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

@@ -1,4 +1,4 @@
-package com.example.harajtask.fragment
+package com.example.harajtask.base.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater

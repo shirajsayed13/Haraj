@@ -2,7 +2,7 @@ package com.example.harajtask.network
 
 import android.content.Context
 import android.net.ConnectivityManager
-import com.example.harajtask.ListingWebService
+import com.example.harajtask.webservice.ListingWebService
 import com.example.harajtask.network.service.AppListingWebService
 import com.example.harajtask.network.service.RetrofitListingWebService
 import dagger.Binds

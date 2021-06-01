@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.harajtask.FeedItem
+import com.example.harajtask.model.FeedItem
 import com.example.harajtask.gui.databinding.ItemListingBinding
 import com.example.harajtask.gui.loadImageFromUrl
 import dagger.hilt.android.scopes.FragmentScoped

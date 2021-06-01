@@ -21,8 +21,10 @@
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:ellipsize="end"
         android:gravity="center|start"
         android:paddingHorizontal="8dp"
         android:paddingVertical="2dp"
@@ -30,6 +32,8 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Toyota Camry GLE 2019" />
 
@@ -91,5 +95,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/iv_product"
         tools:text="Riyadh" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="110dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,7 +21,7 @@ ViewBinding - Generates a binding class for each XML layout file present in that
 Navigation - Android Jetpack's Navigation component refers to the interactions that allow users to navigate across, into, and back out from the different pieces of content within your app.
 
 Dependency Injection
-Hilt - Easier way to incorporate Dagger DI into Android apps. This is in the main branch.
+Hilt - Easier way to incorporate Dagger DI into Android apps.
 
 Retrofit2 - constructing the REST API
 
@@ -89,6 +89,8 @@ The same data could be shared between activities.
 Disclaimer
 I've done my best to follow the principles of Clean Architecture and MVVM.
 If you find any inconsistency with Clean Architecture feel free to open an issue.
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
 Welcome to Haraj challenge!
 
